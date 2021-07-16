@@ -1,0 +1,24 @@
+{
+  "name": "FetchNIFTYgraphs",
+  "version": "1.0.0",
+  "description": "A tool to apply technical indicators (candle chart, 44 & 200 moving average) on NIFTY 200 stocks & save their graphs for intraday analysis",
+  "main": "index.js",
+  "scripts": {
+    "fetchNifty50Graphs": "INDEX=nifty50 wdio run configs/wdio.conf.js",
+    "fetchNifty200Graphs": "INDEX=nifty200 wdio run configs/wdio.conf.js"
+  },
+  "author": "Akshat",
+  "license": "ISC",
+  "dependencies": {
+    "@wdio/cli": "^7.7.4",
+    "@wdio/sync": "^7.7.4",
+    "deepmerge": "^4.2.2"
+  },
+  "devDependencies": {
+    "@wdio/jasmine-framework": "^7.7.3",
+    "@wdio/local-runner": "^7.7.4",
+    "@wdio/spec-reporter": "^7.7.3",
+    "chromedriver": "^90.0.0",
+    "wdio-chromedriver-service": "^7.1.1"
+  }
+}
