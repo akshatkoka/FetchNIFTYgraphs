@@ -88,8 +88,8 @@ class StockDetails{
         this.setCandle.waitForClickable();
         this.setCandle.click();
         this.setSimpleMovingAverage(2);
-        this.set1DayTimeFrame();
-        //this.set15MinTimeFrame()
+        //this.set1DayTimeFrame();
+        this.set15MinTimeFrame()
     }
 
     saveGraph(dir){

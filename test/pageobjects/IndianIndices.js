@@ -16,7 +16,13 @@ class IndianIndices {
 
     fetchStockURLs(stockList){
         for (let i = 1; i <= this.numberOfStocksInSelection; i++) {
-            stockList.add(this.stockName(i).getAttribute('href') + "-chart");
+            let hrefURL = this.stockName(i).getAttribute('href').toString();
+            if(hrefURL.includes("?")){
+                hrefURL = hrefURL.replace("?","-chart?")
+            }else{
+                hrefURL = hrefURL+ "-chart";
+            }
+            stockList.add(hrefURL);
         }
         return stockList
     }
